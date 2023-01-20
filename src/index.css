@@ -5,6 +5,7 @@ html {
   outline: 0;
   box-sizing: border-box;
   scroll-behavior: smooth;
+  height: 100%;
 }
 
 *, *:before, *:after {
@@ -18,20 +19,29 @@ body {
   scrollbar-width: none;
   font-family: 'Karla', sans-serif;
   background-color: #E5E5E5;
+  height: 100%;
 }
 
 body::-webkit-scrollbar {
   display: none;
 }
 
+#root {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+}
+
 .all-content {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: column;
   width: 60%;
+  aspect-ratio: 1/1;
   max-width: 650px;
-  max-height: 650px;
 }
 
 
