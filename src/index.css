@@ -21,3 +21,10 @@ body {
 body::-webkit-scrollbar {
   display: none;
 }
+
+.all-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 10rem auto;
+}
