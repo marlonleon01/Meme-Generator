@@ -16,6 +16,7 @@ body {
   padding: 0;
   -ms-overflow-style: none;
   scrollbar-width: none;
+  font-family: 'Karla', sans-serif;
 }
 
 body::-webkit-scrollbar {
