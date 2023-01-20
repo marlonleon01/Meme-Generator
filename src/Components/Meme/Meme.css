@@ -1,0 +1,42 @@
+.meme-container {
+    background-color: white;
+    width: 100%;
+    flex-grow: 1;
+    padding: 2.5rem 3rem;
+}
+
+.meme-input-section {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+}
+
+.meme-text-field {
+    font-family: 'Karla', sans-serif;
+    border-radius: 5px;
+    border: 1px solid  #D5D4D8;
+    text-indent: 5px;
+    width: 100%;
+    height: 2.5rem;
+    font-size: 1rem;
+}
+
+.meme-btn {
+    grid-column: 1 / -1;
+    background: linear-gradient(90deg, #672280 1.18%, #A626D3 100%);
+    border: none;
+    border-radius: 5px;
+    height: 2.8rem;
+    font-family: 'Karla', sans-serif;
+    color: white;
+    font-size: 1rem;
+    font-weight: 700;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.btn-icon {
+    margin-left: 0.5rem;
+    font-size: 1.2rem;
+}
