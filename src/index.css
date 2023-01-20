@@ -32,3 +32,12 @@ body::-webkit-scrollbar {
   max-width: 650px;
   max-height: 650px;
 }
+
+
+/* Media Queries (Phone) */
+ 
+@media screen and (max-width: 550px) {
+  .all-content {
+    width: 85%;
+  }
+}
