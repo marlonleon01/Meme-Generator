@@ -1,11 +1,11 @@
 import Header from "./Components/Header/Header"
-import Form from "./Components/Form/Form"
+import Meme from "./Components/Meme/Meme"
 
 export default function App() {
   return (
     <div className="all-content">
       <Header />
-      <Form />
+      <Meme />
     </div>
   );
 }
