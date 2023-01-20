@@ -1,5 +1,4 @@
 import {AiOutlinePicture} from "react-icons/ai"
-
 import "./Meme.css"
 
 export default function Meme() {
