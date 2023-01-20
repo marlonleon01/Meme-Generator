@@ -1,11 +1,11 @@
-.meme-container {
+.form {
     background-color: white;
     width: 100%;
     flex-grow: 1;
     padding: 2.5rem 3rem;
 }
 
-.meme-input-section {
+.meme-container {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 1rem;
