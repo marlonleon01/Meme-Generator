@@ -1,6 +1,7 @@
 .header {
-    background: linear-gradient(to right, #672280, #A626D3);
+    background: linear-gradient(90deg, #672280 1.18%, #A626D3 100%);
     width: 100%;
+    max-height: 6rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -16,7 +17,6 @@
 
 .troll-face {
     width: 2.4rem;
-    height: 2.1rem;
     margin-right: 0.5rem;
 }
 
@@ -30,4 +30,25 @@
 .header-course-description {
     font-weight: 500;
     font-size: 1rem;
+}
+
+/* Media Queries (Phone) */
+
+@media screen and (max-width: 550px) {
+    .header {
+        padding: 0.8rem 1.2rem;
+    }
+    
+    .troll-face {
+        width: 1.8rem;
+        margin-right: 0.2rem;
+    }
+    
+    .header-title {
+        font-size: 1rem;
+    }
+    
+    .header-course-description {
+        font-size: 0.75rem;
+    }
 }
