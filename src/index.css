@@ -17,6 +17,7 @@ body {
   -ms-overflow-style: none;
   scrollbar-width: none;
   font-family: 'Karla', sans-serif;
+  background-color: #E5E5E5;
 }
 
 body::-webkit-scrollbar {
