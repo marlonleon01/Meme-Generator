@@ -4,13 +4,23 @@ import "./Meme.css"
 import memesData from "../../memesData"
 
 export default function Meme() {
-    const [memeImage, setMemeImage] = useState("")
+    const [meme, setMeme] = useState({
+        topText: "",
+        bottomText: "",
+        randomImage: "https://i.imgflip.com/1bgw.jpg"
+    })
+    
+    const [allMemeImages, setAllMemeImages] = useState(memesData)
 
     const getMemeImage = () => {
-        const memesArray = memesData.data.memes
+        const memesArray = allMemeImages.data.memes
         const randomNumber = Math.floor(Math.random() * memesArray.length)
         const memesUrl = memesArray[randomNumber].url
-        setMemeImage(memesUrl)
+
+        setMeme(prevMeme => ({
+            ...prevMeme, 
+            randomImage: memesUrl
+        }))
     }
     
     return (
@@ -22,7 +32,7 @@ export default function Meme() {
                     <AiOutlinePicture className="btn-icon"/>
                 </button>
             </div>
-            <img src={memeImage} className="meme-image"/>
+            <img src={meme.randomImage} className="meme-image"/>
         </div>
     )
 }
