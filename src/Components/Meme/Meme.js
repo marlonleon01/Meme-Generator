@@ -7,7 +7,7 @@ export default function Meme() {
     const [meme, setMeme] = useState({
         topText: "",
         bottomText: "",
-        randomImage: "https://i.imgflip.com/1bgw.jpg"
+        randomImage: "https://i.imgflip.com/3si4.jpg"
     })
     
     const [allMemeImages, setAllMemeImages] = useState(memesData)
@@ -32,7 +32,11 @@ export default function Meme() {
                     <AiOutlinePicture className="btn-icon"/>
                 </button>
             </div>
-            <img src={meme.randomImage} className="meme-image"/>
+            <div className="meme">
+                <img src={meme.randomImage} className="meme-image"/>
+                <h2 className="meme-text top">SHUT UP</h2>
+                <h2 className="meme-text botom">AND TAKE MY MONEY</h2>
+            </div>
         </div>
     )
 }
