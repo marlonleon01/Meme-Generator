@@ -9,12 +9,11 @@ export default function Meme() {
         randomImage: "https://i.imgflip.com/3si4.jpg"
     })
     
-    const [allMemes, setallMemes] = useState({})
-
+    const [allMemes, setallMemes] = useState([])
+    
     const getMemeImage = () => {
-        const memesArray = allMemes
-        const randomNumber = Math.floor(Math.random() * memesArray.length)
-        const memesUrl = memesArray[randomNumber].url
+        const randomNumber = Math.floor(Math.random() * allMemes.length)
+        const memesUrl = allMemes[randomNumber].url
 
         setMeme(prevMeme => ({
             ...prevMeme, 
