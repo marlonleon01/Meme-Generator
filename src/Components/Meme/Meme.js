@@ -1,7 +1,6 @@
-import {useState} from "react"
+import {useState, useEffect} from "react"
 import {AiOutlinePicture} from "react-icons/ai"
 import "./Meme.css"
-import memesData from "../../memesData"
 
 export default function Meme() {
     const [meme, setMeme] = useState({
@@ -10,10 +9,10 @@ export default function Meme() {
         randomImage: "https://i.imgflip.com/3si4.jpg"
     })
     
-    const [allMemeImages, setAllMemeImages] = useState(memesData)
+    const [allMemes, setallMemes] = useState({})
 
     const getMemeImage = () => {
-        const memesArray = allMemeImages.data.memes
+        const memesArray = allMemes
         const randomNumber = Math.floor(Math.random() * memesArray.length)
         const memesUrl = memesArray[randomNumber].url
 
@@ -31,6 +30,12 @@ export default function Meme() {
             [name]: value
         }))
     }
+
+    useEffect(() => {
+        fetch("https://api.imgflip.com/get_memes")
+            .then(response => response.json())
+            .then(info => setallMemes(info.data.memes))
+    }, [])
 
     return (
         <div className="form">
