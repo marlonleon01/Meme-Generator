@@ -40,7 +40,6 @@ body::-webkit-scrollbar {
   align-items: center;
   flex-flow: column;
   width: 60%;
-  aspect-ratio: 1/1;
   max-width: 650px;
 }
 
