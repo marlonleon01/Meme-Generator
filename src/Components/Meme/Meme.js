@@ -22,20 +22,47 @@ export default function Meme() {
             randomImage: memesUrl
         }))
     }
-    
+
+    const handleChange = (event) => {
+        const {name, value} = event.target
+
+        setMeme(prevMeme => ({
+            ...prevMeme,
+            [name]: value
+        }))
+    }
+
     return (
         <div className="form">
             <div className="meme-container">
-                <input type="text" placeholder="Top text" className="meme-text-field" />
-                <input type="text" placeholder="Bottom text" className="meme-text-field" />
-                <button className="meme-btn" onClick={getMemeImage}>Get a new meme image 
+                <input 
+                    type="text" 
+                    placeholder="Top text" 
+                    className="meme-text-field"
+                    name="topText" 
+                    value={meme.topText}
+                    onChange={handleChange}
+                />
+                <input 
+                    type="text" 
+                    placeholder="Bottom text" 
+                    className="meme-text-field" 
+                    name="bottomText"
+                    value={meme.bottomText}
+                    onChange={handleChange}
+                />
+                <button 
+                    className="meme-btn" 
+                    onClick={getMemeImage}
+                >
+                    Get a new meme image 
                     <AiOutlinePicture className="btn-icon"/>
                 </button>
             </div>
             <div className="meme">
                 <img src={meme.randomImage} className="meme-image"/>
-                <h2 className="meme-text top">SHUT UP</h2>
-                <h2 className="meme-text bottom">AND TAKE MY MONEY</h2>
+                <h2 className="meme-text top">{meme.topText}</h2>
+                <h2 className="meme-text bottom">{meme.bottomText}</h2>
             </div>
         </div>
     )
