@@ -31,9 +31,13 @@ export default function Meme() {
     }
 
     useEffect(() => {
-        fetch("https://api.imgflip.com/get_memes")
-            .then(response => response.json())
-            .then(info => setallMemes(info.data.memes))
+        async function getMemes() {
+            const res = await fetch("https://api.imgflip.com/get_memes")
+            const data = await res.json()
+            setAllMemes(data.data.memes)
+        }
+
+        getMemes()
     }, [])
 
     return (
