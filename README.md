@@ -1,5 +1,23 @@
 # Getting Started with Create React App
 
+## Description
+-I created this while follow the react basics course from scrimba   
+-Its main purpose was to practice state and useEffect to render and hold information
+-It calls to an api to render the meme whenever the button is clicked
+
+## Required Files
+-Git  
+-Node.js  
+-Npm (which should be included with your node installation)  
+-Code editor (Visual Studio Code recommended)  
+
+## Installation
+-Open terminal  
+-Clone the repo with: $ git clone {url}  
+-cd into the folder  
+-type: $ npm install  
+-then follow from "Getting Started with Create React App"  
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
