@@ -2,8 +2,8 @@
 
 ## Description
 -I created this while follow the react basics course from scrimba   
--Its main purpose was to practice state and useEffect to render and hold information
--It calls to an api to render the meme whenever the button is clicked
+-Its main purpose was to practice state and useEffect to render and hold information  
+-It calls to an api to render the meme whenever the button is clicked  
 
 ## Required Files
 -Git  
